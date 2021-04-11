@@ -13,6 +13,8 @@ BOT_PREFIX = ('k!')
 TOKEN = os.getenv('BOT_TOKEN')
 
 intents = discord.Intents.all()
+intents.members = True
+
 bot = Bot(command_prefix=BOT_PREFIX, intents=intents)
 
 bot.remove_command("help")
@@ -21,6 +23,7 @@ bot.remove_command("help")
 async def on_ready():
     print('Bot ready.')
     watcher = Watcher(bot, path='Cogs')
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="over Kinda Sus"))
     await watcher.start()
 
 
