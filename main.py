@@ -3,6 +3,7 @@ import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
 from dotenv import load_dotenv
+from cogwatch import Watcher
 
 
 load_dotenv()
@@ -13,6 +14,14 @@ TOKEN = os.getenv('BOT_TOKEN')
 
 intents = discord.Intents.all()
 bot = Bot(command_prefix=BOT_PREFIX, intents=intents)
+
+bot.remove_command("help")
+
+@bot.event
+async def on_ready():
+    print('Bot ready.')
+    watcher = Watcher(bot, path='Cogs')
+    await watcher.start()
 
 
 if __name__ == '__main__':

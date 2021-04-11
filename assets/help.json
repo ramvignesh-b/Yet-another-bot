@@ -1,0 +1,8 @@
+[
+    {"command":"ping", "help":"⏳ Returns the response time of the bot"},
+    {"command":"motivate", "help":"😇 Gives you a motivational message"},
+    {"command":"joke", "help":"🤡 Gives you a joke "},
+    {"command":"quote", "help":"🗨 Gives you a nice quote"},
+    {"command":"define", "help":"👨‍🏫 Gives you the Urban Defn. of the word"},
+    {"command":"roast <@member>", "help":"🙊 Trash talk?! You got it ;)"}
+]

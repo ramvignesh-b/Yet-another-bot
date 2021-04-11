@@ -66,7 +66,7 @@ class Welcome(commands.Cog):
 
             file=discord.File('Temp/welcome.png', filename="welcome.png")
             embed.set_image(url="attachment://welcome.png")
-            await member.guild.system_channel.send(file=file, embed=embed)
+            await member.guild.fetch_channel('793142615793074236').send(file=file, embed=embed)
 
 
 def setup(bot:commands.Bot):
