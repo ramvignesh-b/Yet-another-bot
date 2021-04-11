@@ -1,5 +1,6 @@
 [
     {"command":"ping", "help":"⏳ Returns the response time of the bot"},
+    {"command":"id", "help":"💳 Gives you the Kinda Sus ID instantly"},
     {"command":"motivate", "help":"😇 Gives you a motivational message"},
     {"command":"joke", "help":"🤡 Gives you a joke "},
     {"command":"quote", "help":"🗨 Gives you a nice quote"},
