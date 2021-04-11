@@ -1,0 +1,6 @@
+.env
+Cogs/__pycache__/
+
+!Temp/
+
+Temp/*
