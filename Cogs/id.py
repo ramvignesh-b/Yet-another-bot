@@ -11,7 +11,7 @@ class ID(commands.Cog):
 
     @commands.command()
     async def id(self, ctx:commands.Context, user: discord.Member = None):
-        roles = ['cyan', 'brown', 'red', 'blue', 'black', 'yellow', 'lime', 'green', 'white', 'purple']
+        roles = ['cyan', 'brown', 'red', 'blue', 'black', 'yellow', 'lime', 'green', 'white', 'purple', 'orange', 'pink']
         if user == None:
             user = ctx.message.author
         img = Image.open("assets/profile/id.png")
