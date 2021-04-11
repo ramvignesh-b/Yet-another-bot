@@ -1,6 +1,10 @@
+#Ignore
 .env
 Cogs/__pycache__/
+Temp/*
+.vscode
+__pycache__
 
+#No Ignore
 !Temp/
 
-Temp/*
