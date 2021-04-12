@@ -17,7 +17,7 @@ class Post(commands.Cog):
 
 
     @commands.command()
-    async def post_gif(self, ctx:commands.Context, *, search: str):
+    async def gif(self, ctx:commands.Context, *, search: str):
         search = search.replace(" ", "+")
         response = requests.get('http://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=' + GIPHY_TOKEN + '&limit=50' +'&rating=g')
         data = json.loads(response.text)
