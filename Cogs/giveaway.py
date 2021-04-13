@@ -9,7 +9,7 @@ class Giveaway(commands.Cog):
 
     @commands.command()
     async def giveaway(self, ctx:commands.Context, title, text, end):
-        await ctx.send(f"@everyone A new giveaway has been started. React with '🎟️' to participate.")
+        await ctx.send(f"@here A new giveaway has been started. React with '🎟️' to participate.")
         embed = discord.Embed(title=title, description=text, color=discord.Colour.magenta())
         embed.add_field(name="Ends on", value=end)
         embed.set_footer(text=f"Started by {ctx.author}", icon_url=ctx.author.avatar_url)
