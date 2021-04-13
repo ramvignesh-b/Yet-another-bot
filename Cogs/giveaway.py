@@ -47,7 +47,7 @@ class Giveaway(commands.Cog):
             await ctx.send(embed=embed)
         else:
             await ctx.send(embed=discord.Embed(description=f"Error while picking a winner! Less no. of participants!", color=discord.Colour.magenta()))
-
+        await ctx.message.delete()
 
 
 def setup(bot:commands.Bot):
