@@ -35,6 +35,6 @@ if __name__ == '__main__':
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f"{round(bot.latency * 1000)}ms")
+    await ctx.send(f"Pong! <:didUpingMe:798981967814459502> {round(bot.latency * 1000)} ms")
 
 bot.run(TOKEN)
