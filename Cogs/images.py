@@ -175,5 +175,15 @@ class Images(commands.Cog):
         await ctx.send(file=file, embed=embed)
 
 
+    @commands.command()
+    async def bigtext(self, ctx, *, message):
+        await ctx.message.delete()
+        response = requests.get(url=f"https://api.alexflipnote.dev/supreme?text={message}&dark=true", headers=headers)
+        byte = BytesIO(response.content)
+        image = Image.open(byte)
+        image.save(f"Temp/bigt_{ctx.author.id}.png","png")
+        await ctx.send(file=discord.File(f"Temp/bigt_{ctx.author.id}.png"))
+        
+
 def setup(bot:commands.Bot):
     bot.add_cog(Images(bot))
