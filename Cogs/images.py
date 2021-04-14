@@ -164,7 +164,9 @@ class Images(commands.Cog):
     @commands.command()
     async def trash(self, ctx, user:discord.Member):
         await ctx.message.delete()
-        response = requests.get(url=f"https://api.alexflipnote.dev/trash?face={ctx.author.avatar_url_as(format="png")}&trash={user.avatar_url_as(format="png")}", headers=headers)
+        img1 = ctx.author.avatar_url_as(format="png")
+        img2 = user.avatar_url_as(format="png")
+        response = requests.get(url=f"https://api.alexflipnote.dev/trash?face={img1}&trash={img2}", headers=headers)
         byte = BytesIO(response.content)
         image = Image.open(byte)
         image.save(f"Temp/trash_{user.id}.png","png")
