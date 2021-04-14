@@ -3,3 +3,5 @@ Pillow
 requests
 python-dotenv
 cogwatch
+aiohttp
+asyncdagpi

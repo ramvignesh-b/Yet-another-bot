@@ -72,7 +72,7 @@ class Welcome(commands.Cog):
     async def on_member_remove(self, member:discord.Member):
         if member.guild.id != 793117819000717322:
             return
-        embed=discord.Embed(description=f"Uh oh, {member.mention} has left the server <:pikatears:824738880095912017>! We have {len(member.guild.members)} now! <:icri:793199677582999582>", color=discord.Colour.magenta())
+        embed=discord.Embed(description=f"Uh oh, {member.mention} has left the server <:pikatears:824738880095912017>! We have {len(member.guild.members)} members now! <:icri:793199677582999582>", color=discord.Colour.magenta())
         embed.set_image(url="https://media.giphy.com/media/26u4b45b8KlgAB7iM/giphy.gif")
         await member.guild.get_channel(793142615793074236).send(embed=embed)
 
