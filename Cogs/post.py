@@ -26,5 +26,19 @@ class Post(commands.Cog):
         await ctx.send(embed=discord.Embed(color=0x9c13ae).set_image(url=result_gif).set_footer(text=f"Requested by: {ctx.author.name}", icon_url=ctx.author.avatar_url))
 
 
+    @commands.command(pass_context=True)
+    async def woof(self, ctx):
+        response = requests.get("https://dog.ceo/api/breeds/image/random")
+        data = json.loads(response.text)
+        await ctx.send(embed=discord.Embed(title="Woof woof! 🐶", color=0x9c13ae).set_image(url=f"{data['message']}"))
+    
+    
+    @commands.command(pass_context=True)
+    async def meow(self, ctx):
+        response = requests.get("https://api.thecatapi.com/v1/images/search")
+        data = json.loads(response.text)
+        await ctx.send(embed=discord.Embed(title="Meooow! 🐱", color=0x9c13ae).set_image(url=f"{data[0]['url']}"))
+
+
 def setup(bot:commands.Bot):
     bot.add_cog(Post(bot))
