@@ -1,0 +1,7 @@
+[
+    {"command":"woof", "help":"🐶 Sends an image of a cute dog"},
+    {"command":"meow", "help":"🐱 Sends an image of a cute cat"},
+    {"command":"frog", "help":"🐸 Sends an image of a cute frog"},
+    {"command":"duck", "help":"🦆 Sends an image of a cute duck"},
+    {"command":"bunny", "help":"🐰 Sends an image of a cute bunny"}
+]

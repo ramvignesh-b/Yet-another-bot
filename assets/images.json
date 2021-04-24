@@ -1,0 +1,9 @@
+[
+    {"command":"kick <@member>", "help":"🦶 Boots a person into space in Among Us style"},
+    {"command":"stab <@member>", "help":"🔪 Put your knife in someone's chest, for safekeeping"},
+    {"command":"trigger <@member>", "help":"🦧 Someone's triggered? Use this :)"},
+    {"command":"trash <@member>", "help":"🚮 Throw someone into where they belong"},
+    {"command":"fact <text>", "help":"❗ Add a fact to Dr. Kent Sess 'Fact Book' (Highly effective for arguments)"}, 
+    {"command":"drake \"top text\" \"bottom text\"", "help":"✋👉 Recreate the famous 'Not that, but this' meme with your own texts"},
+    {"command":"bigtext <text>", "help":"🔠 Turn your normal font into giant-sized text-image"}
+]
