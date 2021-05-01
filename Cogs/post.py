@@ -85,5 +85,6 @@ class Post(commands.Cog):
             data = json.loads(response.text)
         await ctx.send(embed=discord.Embed(title=f"\"{data['title']}\"", color=discord.Colour.magenta()).set_image(url=f"{data['url']}"))
 
+
 def setup(bot:commands.Bot):
     bot.add_cog(Post(bot))

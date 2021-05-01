@@ -7,5 +7,6 @@
     {"command":"define", "help":"👨‍🏫 Gives you the Urban Defn. of the word"},
     {"command":"gif <query>", "help":"📟 Sends a random gif based on the query"},
     {"command":"sticker <query>", "help":"📼 Sends a random sticker based on the query"},
-    {"command":"roast <@member>", "help":"🙊 Trash talk?! You got it ;)"}
+    {"command":"roast <@member>", "help":"🙊 Trash talk?! You got it ;)"},
+    {"command":"hug <@member>", "help":"🤗 Sends a warm hug to someone"}
 ]

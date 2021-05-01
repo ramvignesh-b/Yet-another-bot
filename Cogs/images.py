@@ -20,7 +20,7 @@ class Images(commands.Cog):
     def __init__(self, bot:commands.Bot):
         self.bot = bot
 
-
+    
     @commands.command()
     async def stab(self, ctx:commands.Context, user:discord.Member, user2:discord.Member = None):
         await ctx.message.delete()

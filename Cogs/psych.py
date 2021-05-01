@@ -72,5 +72,9 @@ class Psych(commands.Cog):
             await self.bot.change_presence(status=discord.Status.do_not_disturb)
             #print("set status to dnd")
 
+    @commands.command()
+    async def unjinx(self, ctx, user: discord.Member):
+        await ctx.send(embed=discord.Embed(description=f"{user.mention} has been unjinxed 🧙‍♂️✨", color=discord.Colour.magenta()))
+
 def setup(bot:commands.Bot):
     bot.add_cog(Psych(bot))
