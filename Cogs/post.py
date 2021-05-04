@@ -75,6 +75,14 @@ class Post(commands.Cog):
         response = requests.get("https://randomfox.ca/floof/")
         data = json.loads(response.text)
         await ctx.send(embed=discord.Embed(title="Booop! 🦊", color=discord.Colour.magenta()).set_image(url=f"{data['image']}"))
+ 
+    @commands.command(pass_context=True)
+    async def oink(self, ctx):
+        response = requests.get("https://pixabay.com/api/?key=21235030-93835b5c477d07feab3263cad&q=piglets&per_page=100")
+        data = json.loads(response.text)
+        choice = random.choice(data['hits'])
+        url = choice['webformatURL']
+        await ctx.send(embed=discord.Embed(title="Oiiink! 🐷", color=discord.Colour.magenta()).set_image(url=url))   
 
     @commands.command(pass_context=True)
     async def meme(self, ctx):
