@@ -182,7 +182,9 @@ class Images(commands.Cog):
         byte = BytesIO(response.content)
         image = Image.open(byte)
         image.save(f"Temp/bigt_{ctx.author.id}.png","png")
-        await ctx.send(file=discord.File(f"Temp/bigt_{ctx.author.id}.png"))
+        file=discord.File(f"Temp/bigt_{ctx.author.id}.png")
+        embed = discord.Embed(color=discord.Colour.magenta()).set_image(url=f"attachment://bigt_{ctx.author.id}.png")
+        await ctx.send(file=file, embed=embed.set_footer(text=f"Requested by {ctx.author}", icon_url=ctx.author.avatar_url))
         
 
 def setup(bot:commands.Bot):
