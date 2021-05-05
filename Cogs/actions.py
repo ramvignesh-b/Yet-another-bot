@@ -13,7 +13,8 @@ class Actions(commands.Cog):
     async def hug(self, ctx, user: discord.Member):
         response = requests.get("https://nekos.life/api/hug")
         data = json.loads(response.text)
-        await ctx.send(embed=discord.Embed(description=f"{ctx.author.mention} hugged {user.mention}! <a:pingu_hug:823864118117007390>", color=discord.Colour.magenta()).set_image(url=f"{data['url']}"))
+        embed = discord.Embed(description=f"{ctx.author.mention} hugged {user.mention}! <a:pingu_hug:823864118117007390>", color=discord.Colour.magenta())
+        await ctx.send(embed=embed.set_image(url=f"{data['url']}").set_footer(text=f"Requested by {ctx.author}", icon_url=ctx.author.avatar_url))
 
 
 def setup(bot:commands.Bot):
