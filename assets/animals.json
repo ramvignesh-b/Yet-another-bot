@@ -4,5 +4,9 @@
     {"command":"frog", "help":"🐸 Sends an image of a cute frog"},
     {"command":"duck", "help":"🦆 Sends an image of a cute duck"},
     {"command":"bunny", "help":"🐰 Sends an image of a cute bunny"},
-    {"command":"fox", "help":"🦊 Sends an image of a cute fox"}
+    {"command":"fox", "help":"🦊 Sends an image of a cute fox"},
+    {"command":"oink", "help":"🐷 Sends an image of a cute piggy"},
+    {"command":"moo", "help":"🐮 Sends an image of a cute cow"},
+    {"command":"horsey", "help":"🐴 Sends an image of a cute horse"},
+    {"command":"baa", "help":"🐐 Sends an image of a cute goat"}
 ]

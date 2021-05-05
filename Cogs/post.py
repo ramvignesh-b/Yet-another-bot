@@ -83,6 +83,31 @@ class Post(commands.Cog):
         choice = random.choice(data['hits'])
         url = choice['webformatURL']
         await ctx.send(embed=discord.Embed(title="Oiiink! 🐷", color=discord.Colour.magenta()).set_image(url=url))   
+        
+    @commands.command(pass_context=True)
+    async def baa(self, ctx):
+        response = requests.get("https://pixabay.com/api/?key=21235030-93835b5c477d07feab3263cad&q=kid+goat&per_page=100")
+        data = json.loads(response.text)
+        choice = random.choice(data['hits'])
+        url = choice['webformatURL']
+        await ctx.send(embed=discord.Embed(title="Baaaaa! 🐐", color=discord.Colour.magenta()).set_image(url=url))   
+ 
+    @commands.command(pass_context=True)
+    async def moo(self, ctx):
+        response = requests.get("https://pixabay.com/api/?key=21235030-93835b5c477d07feab3263cad&q=cow+calf&per_page=100")
+        data = json.loads(response.text)
+        choice = random.choice(data['hits'])
+        url = choice['webformatURL']
+        await ctx.send(embed=discord.Embed(title="Moooo! 🐮", color=discord.Colour.magenta()).set_image(url=url))   
+
+    @commands.command(pass_context=True)
+    async def horsey(self, ctx):
+        response = requests.get("https://pixabay.com/api/?key=21235030-93835b5c477d07feab3263cad&q=horse+foal&per_page=100")
+        data = json.loads(response.text)
+        choice = random.choice(data['hits'])
+        url = choice['webformatURL']
+        await ctx.send(embed=discord.Embed(title="Neiiighh! 🐴", color=discord.Colour.magenta()).set_image(url=url))   
+
 
     @commands.command(pass_context=True)
     async def meme(self, ctx):
